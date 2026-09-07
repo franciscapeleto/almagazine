@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin AL Magazine - Sem Código</title>
+<script src="https://cdn.tailwindcss.com"></script></head>
+<body class="bg-zinc-900 text-white p-4">
+<div class="max-w-4xl mx-auto">
+<h1 class="text-2xl font-black">AL Magazine <span class="text-[#1992C9]">Admin</span> - sem código</h1>
+<p class="text-zinc-400 text-sm mb-6">1. Preencha | 2. Clique Adicionar | 3. Baixar produtos.json | 4. Arraste pro GitHub</p>
+
+<div class="bg-zinc-800 p-5 rounded-2xl">
+<input id="nome" placeholder="Nome produto ex: iPhone 15 128GB" class="w-full p-3 rounded bg-zinc-700 mb-2">
+<div class="grid grid-cols-2 gap-2">
+<input id="pix" type="number" placeholder="PIX ex: 4199" class="p-3 rounded bg-zinc-700">
+<input id="pix_fmt" placeholder="PIX formatado ex: R$ 4.199,00" class="p-3 rounded bg-zinc-700">
+</div>
+<input id="parc" placeholder="Parcelado ex: 12x de R$ 389,90" class="w-full p-3 rounded bg-zinc-700 mt-2">
+<select id="cat" class="w-full p-3 rounded bg-zinc-700 mt-2"><option>iPhone</option><option>MacBook</option><option>Xiaomi</option><option>GiraGrill</option><option>Acessórios</option></select>
+<button onclick="add()" class="w-full mt-3 bg-[#1992C9] py-3 rounded-xl font-bold">+ ADICIONAR PRODUTO</button>
+</div>
+
+<div id="lista" class="mt-6 grid gap-2"></div>
+
+<div class="mt-8 flex gap-2">
+<button onclick="baixar()" class="bg-white text-black px-6 py-3 rounded-xl font-bold">⬇️ Baixar produtos.json</button>
+<button onclick="if(confirm('Limpar tudo?')){produtos=[];save();render()}" class="bg-zinc-700 px-6 py-3 rounded-xl">Limpar</button>
+<a href="index.html" class="bg-zinc-700 px-6 py-3 rounded-xl">Ver Site</a>
+</div>
+
+<p class="text-zinc-500 text-xs mt-6">Dica: Depois de baixar, vá no GitHub no seu repositório almagazineonline.github.io > Add file > Upload files > arraste o produtos.json > Commit changes. Site atualiza em 1 min.</p>
+</div>
+<script>
+let produtos = JSON.parse(localStorage.getItem('al_produtos') || localStorage.getItem('produtos_backup') || '[]');
+if(produtos.length===0){
+  // carrega do arquivo se existir
+  fetch('produtos.json').then(r=>r.json()).then(d=>{produtos=d; save(); render();}).catch(()=>render());
+} else render();
+function save(){localStorage.setItem('al_produtos', JSON.stringify(produtos))}
+function render(){
+  document.getElementById('lista').innerHTML = produtos.map((p,i)=>`<div class="bg-zinc-800 p-3 rounded-xl flex justify-between"><div><b>${p.nome}</b><br><span class="text-[#1992C9]">${p.preco_pix_fmt||'R$ '+p.preco_pix} - ${p.preco_parcelado}</span></div><button onclick="produtos.splice(${i},1);save();render()" class="text-red-400">X</button></div>`).join('');
+}
+function add(){
+  const nome=document.getElementById('nome').value.trim();
+  const pix=parseFloat(document.getElementById('pix').value);
+  const pix_fmt=document.getElementById('pix_fmt').value.trim()|| (pix? 'R$ '+pix.toLocaleString('pt-BR'):'');
+  const parc=document.getElementById('parc').value.trim();
+  const cat=document.getElementById('cat').value;
+  if(!nome||!pix){alert('Nome e PIX obrigatórios');return;}
+  produtos.push({id:Date.now(), nome, categoria:cat, preco_pix:pix, preco_pix_fmt:pix_fmt, preco_parcelado:parc, destaque:true});
+  save(); render();
+  nomeEl=document.getElementById('nome'); nomeEl.value=''; document.getElementById('pix').value=''; document.getElementById('pix_fmt').value=''; document.getElementById('parc').value='';
+}
+function baixar(){
+  const blob=new Blob([JSON.stringify(produtos,null,2)],{type:'application/json'});
+  const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='produtos.json'; a.click();
+}
+</script>
+</body>
+</html>
