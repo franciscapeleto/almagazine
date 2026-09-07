@@ -3,10 +3,9 @@
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AL Magazine Online | iPhone Original Lacrado em Pompeia-SP</title>
-<meta name="description" content="AL Magazine Online em Pompeia-SP. iPhones originais lacrados EUA, garantia 12 meses, entrega todo Brasil. WhatsApp 14 98184-1132">
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-<style>body{font-family:Inter,sans-serif} .bg-brand{ background:#1992C9} .text-brand{color:#1992C9} .border-brand{border-color:#1992C9}</style>
+<style>body{font-family:Inter,sans-serif}</style>
 </head>
 <body class="bg-zinc-50 text-zinc-900">
 <header class="bg-black text-white sticky top-0 z-50">
@@ -19,110 +18,45 @@
 </div>
 </header>
 
-<section id="inicio" class="bg-black text-white">
-<div class="max-w-7xl mx-auto px-4 py-16 md:py-24 grid md:grid-cols-2 gap-8 items-center">
-<div>
-<div class="inline-block bg-zinc-800 px-3 py-1 rounded-full text-xs mb-4">📍 Pompeia-SP | Envio para todo Brasil</div>
-<h1 class="text-4xl md:text-5xl font-black leading-tight">iPhone Original <span class="text-[#1992C9]">Lacrado EUA</span><br>com Garantia de 12 Meses</h1>
-<p class="text-zinc-400 mt-4">Mais de 500 clientes em Pompeia e região de Marília. Loja física + online com atendimento no WhatsApp.</p>
-<div class="flex gap-3 mt-6">
-<a href="#produtos" class="bg-[#1992C9] px-6 py-3 rounded-xl font-bold">Ver Produtos</a>
-<a href="https://wa.me/5514981841132?text=Ol%C3%A1%20AL%20Magazine%2C%20quero%20um%20or%C3%A7amento" class="bg-white text-black px-6 py-3 rounded-xl font-bold">Orçamento</a>
-</div>
-<div class="flex gap-6 mt-8 text-xs text-zinc-400">
-<span>✅ Lacrado</span><span>✅ 12 Meses Garantia</span><span>✅ Entrega Rápida</span>
-</div>
-</div>
-<div class="bg-zinc-900 rounded-[2rem] p-8 border border-zinc-800">
-<div class="text-center">
-<div class="text-6xl mb-4">📱</div>
-<p class="font-bold">AL Magazine Online</p>
-<p class="text-sm text-zinc-500">Rua Senador Feijó, 315 - Centro<br>Pompeia-SP<br>Seg-Sex 9h-18h | Sáb 9h-13h</p>
-</div>
-</div>
-</div>
-</section>
+<section class="bg-black text-white"><div class="max-w-7xl mx-auto px-4 py-16 text-center">
+<h1 class="text-4xl font-black">iPhone Original <span class="text-[#1992C9]">Lacrado EUA</span> com Garantia 12 Meses</h1>
+<p class="text-zinc-400 mt-2">Pompeia-SP | Entrega todo Brasil | (14) 98184-1132</p>
+</div></section>
 
-<section id="sobre" class="max-w-7xl mx-auto px-4 py-16">
-<div class="grid md:grid-cols-2 gap-10 items-center">
-<div>
-<h2 class="text-3xl font-black mb-4">Sobre a AL Magazine</h2>
-<p class="text-zinc-600 leading-relaxed">A AL Magazine Online nasceu em Pompeia-SP em 2022 com a missão de trazer tecnologia original e lacrada importada dos EUA com preço justo. Somos especialistas em iPhones originais, com garantia de 12 meses, procedência garantida e atendimento local em Pompeia e toda região de Marília. Mais de 500 clientes satisfeitos que confiam na nossa entrega rápida e segura para todo o Brasil.</p>
-<div class="grid grid-cols-2 gap-4 mt-6">
-<div class="bg-black text-white p-4 rounded-xl"><b class="text-[#1992C9] text-2xl">500+</b><br>clientes</div>
-<div class="bg-black text-white p-4 rounded-xl"><b class="text-[#1992C9] text-2xl">12m</b><br>garantia</div>
-</div>
-</div>
-<div class="bg-white p-6 rounded-2xl border">
-<h3 class="font-bold mb-3">Por que comprar aqui?</h3>
-<ul class="space-y-2 text-sm text-zinc-600">
-<li>✅ Produto 100% original lacrado importado EUA</li>
-<li>✅ Garantia real de 12 meses</li>
-<li>✅ Loja física em Pompeia - Rua Senador Feijó, 315</li>
-<li>✅ Entrega em Pompeia, Marília, Tupã e todo Brasil</li>
-<li>✅ Aceita PIX, Cartão em até 12x e troca do usado</li>
-</ul>
-</div>
-</div>
-</section>
-
-<section id="produtos" class="bg-white py-16">
+<section id="produtos" class="bg-white py-12">
 <div class="max-w-7xl mx-auto px-4">
-<h2 class="text-3xl font-black mb-2">Produtos em Destaque</h2>
-<p class="text-zinc-500 mb-8">PIX com desconto ou 12x no cartão. Clique e feche no WhatsApp.</p>
+<h2 class="text-2xl font-black mb-6">Produtos (<span id="count">0</span>)</h2>
 <div id="grid" class="grid md:grid-cols-3 gap-6"></div>
+<div id="debug" class="mt-6 p-3 bg-yellow-100 text-xs rounded"></div>
 </div>
 </section>
-
-<section id="depoimentos" class="max-w-7xl mx-auto px-4 py-16">
-<h2 class="text-3xl font-black mb-8">O que falam de Pompeia e região</h2>
-<div class="grid md:grid-cols-3 gap-6">
-<div class="bg-black text-white p-6 rounded-2xl"><p>"Comprei meu iPhone 15 na AL Magazine e chegou lacrado no mesmo dia aqui em Pompeia. Atendimento top do Gustavo!"</p><b class="text-[#1992C9] block mt-3">Marcos R. - Pompeia-SP</b></div>
-<div class="bg-black text-white p-6 rounded-2xl"><p>"Melhor preço da região de Marília, pegaram meu usado na troca e ainda parcelaram. Recomendo demais."</p><b class="text-[#1992C9] block mt-3">Juliana S. - Marília-SP</b></div>
-<div class="bg-black text-white p-6 rounded-2xl"><p>"GiraGrill original, já tinha comprado falsificada em outro lugar. Aqui é original e com garantia."</p><b class="text-[#1992C9] block mt-3">Fernando L. - Tupã-SP</b></div>
-</div>
-</section>
-
-<section id="faq" class="bg-zinc-100 py-16">
-<div class="max-w-3xl mx-auto px-4">
-<h2 class="text-3xl font-black mb-8 text-center">Dúvidas Frequentes</h2>
-<details class="bg-white p-4 rounded-xl mb-3"><summary class="font-bold">É original lacrado mesmo?</summary><p class="text-sm text-zinc-600 mt-2">Sim, 100% original importado dos EUA, lacrado de fábrica. Você abre na hora.</p></details>
-<details class="bg-white p-4 rounded-xl mb-3"><summary class="font-bold">Qual garantia?</summary><p class="text-sm text-zinc-600 mt-2">12 meses de garantia total AL Magazine + garantia Apple.</p></details>
-<details class="bg-white p-4 rounded-xl mb-3"><summary class="font-bold">Entrega em Pompeia e Marília?</summary><p class="text-sm text-zinc-600 mt-2">Sim, entrega no mesmo dia em Pompeia e região. Enviamos para todo Brasil via Correios/Jadlog.</p></details>
-<details class="bg-white p-4 rounded-xl mb-3"><summary class="font-bold">Aceita troca do usado?</summary><p class="text-sm text-zinc-600 mt-2">Sim, avaliamos seu iPhone usado na hora pelo WhatsApp.</p></details>
-<details class="bg-white p-4 rounded-xl mb-3"><summary class="font-bold">Formas de pagamento?</summary><p class="text-sm text-zinc-600 mt-2">PIX com desconto, cartão em até 12x, transferência.</p></details>
-</div>
-</section>
-
-<section id="contato" class="bg-black text-white py-16">
-<div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-10">
-<div>
-<h2 class="text-3xl font-black mb-4">Fale no WhatsApp</h2>
-<p class="text-zinc-400">Rua Senador Feijó, 315 - Centro, Pompeia-SP<br>Seg-Sex 9h-18h | Sáb 9h-13h</p>
-<a href="https://wa.me/5514981841132?text=Ol%C3%A1%20quero%20um%20iPhone" class="inline-block mt-6 bg-[#25D366] px-8 py-4 rounded-xl font-bold">Chamar no WhatsApp (14) 98184-1132</a>
-<p class="mt-4 text-sm text-zinc-500">Instagram: @almagazineonline</p>
-</div>
-<iframe class="w-full h-64 rounded-2xl" src="https://maps.google.com/maps?q=Rua%20Senador%20Feijo%20315%20Pompeia%20SP&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
-</div>
-</section>
-
-<a href="https://wa.me/5514981841132" class="fixed bottom-4 right-4 bg-[#25D366] w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-xl">💬</a>
 
 <script>
-fetch('produtos.json').then(r=>r.json()).then(produtos=>{
+fetch('produtos.json?v='+Date.now())
+.then(r=>{ if(!r.ok) throw new Error('produtos.json não encontrado'); return r.json(); })
+.then(produtos=>{
+  console.log('produtos carregados', produtos);
+  document.getElementById('count').innerText = produtos.length;
+  document.getElementById('debug').innerText = 'JSON carregado com ' + produtos.length + ' produtos';
   const grid=document.getElementById('grid');
-  grid.innerHTML=produtos.map(p=>`
-    <div class="border rounded-2xl p-5 hover:shadow-xl transition">
-      <div class="bg-zinc-100 h-40 rounded-xl flex items-center justify-center text-5xl mb-4">📱</div>
-      <span class="text-xs bg-black text-white px-2 py-1 rounded">${p.categoria}</span>
+  if(produtos.length===0){ grid.innerHTML='<p>Nenhum produto no JSON</p>'; return; }
+  grid.innerHTML=produtos.map(p=>{
+    const temFoto = p.imagem && p.imagem.length>5;
+    const imgHtml = temFoto ? `<img src="${p.imagem}" class="h-48 w-full object-cover rounded-xl mb-3 bg-zinc-100" onerror="this.src='https://via.placeholder.com/300x200?text=Sem+Foto'">` : `<div class="bg-zinc-100 h-48 rounded-xl flex items-center justify-center text-4xl mb-3">📱</div>`;
+    return `
+    <div class="border rounded-2xl p-4 hover:shadow-lg">
+      ${imgHtml}
+      <span class="text-xs bg-black text-white px-2 py-1 rounded">${p.categoria||''}</span>
       <h3 class="font-bold mt-2">${p.nome}</h3>
-      <p class="text-[#1992C9] font-black text-xl mt-2">PIX ${p.preco_pix_fmt}</p>
-      <p class="text-zinc-500 text-sm">${p.preco_parcelado}</p>
-      <a href="https://wa.me/5514981841132?text=Ol%C3%A1%20quero%20o%20${encodeURIComponent(p.nome)}%20por%20${encodeURIComponent(p.preco_pix_fmt)}" target="_blank" class="block text-center mt-4 bg-black text-white py-3 rounded-xl font-bold hover:bg-[#1992C9]">Comprar no WhatsApp</a>
-    </div>
-  `).join('');
-}).catch(()=>{ // fallback se json nao carregar
-  document.getElementById('grid').innerHTML='<p class="col-span-3 text-center text-zinc-500">Adicione produtos no admin.html</p>';
+      <p class="text-[#1992C9] font-black text-lg mt-1">PIX ${p.preco_pix_fmt || ('R$ '+p.preco_pix)}</p>
+      <p class="text-zinc-500 text-sm">${p.preco_parcelado||''}</p>
+      <a href="https://wa.me/5514981841132?text=Ol%C3%A1%20quero%20o%20${encodeURIComponent(p.nome)}" target="_blank" class="block text-center mt-3 bg-black text-white py-2.5 rounded-xl font-bold hover:bg-[#1992C9]">Comprar no WhatsApp</a>
+    </div>`;
+  }).join('');
+})
+.catch(err=>{
+  document.getElementById('debug').innerText = 'ERRO: '+err.message + ' - Verifique se produtos.json está na mesma pasta que index.html (minúsculo)';
+  document.getElementById('grid').innerHTML='<p class="text-red-500">Erro ao carregar produtos.json. Veja debug abaixo.</p>';
 });
 </script>
 </body>
