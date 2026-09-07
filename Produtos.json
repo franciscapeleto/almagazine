@@ -1,56 +1,12 @@
 [
   {
-    "id": 1,
-    "nome": "iPhone 15 128GB Preto",
+    "id": 1788789931880,
+    "nome": "aaaaaaaaaaaaaaa",
     "categoria": "iPhone",
-    "preco_pix": 4199.0,
-    "preco_pix_fmt": "R$ 4.199,00",
-    "preco_parcelado": "12x de R$ 389,90",
-    "destaque": true
-  },
-  {
-    "id": 2,
-    "nome": "iPhone 16 Pro Max 256GB Titânio Natural",
-    "categoria": "iPhone",
-    "preco_pix": 8499.0,
-    "preco_pix_fmt": "R$ 8.499,00",
-    "preco_parcelado": "12x de R$ 789,90",
-    "destaque": true
-  },
-  {
-    "id": 3,
-    "nome": "iPhone 15 Pro 128GB Titânio Azul",
-    "categoria": "iPhone",
-    "preco_pix": 6299.0,
-    "preco_pix_fmt": "R$ 6.299,00",
-    "preco_parcelado": "12x de R$ 584,90",
-    "destaque": false
-  },
-  {
-    "id": 4,
-    "nome": "MacBook Air M2 256GB Meia-noite",
-    "categoria": "MacBook",
-    "preco_pix": 7899.0,
-    "preco_pix_fmt": "R$ 7.899,00",
-    "preco_parcelado": "12x de R$ 729,90",
-    "destaque": true
-  },
-  {
-    "id": 5,
-    "nome": "Xiaomi Redmi Note 13 Pro 256GB Preto",
-    "categoria": "Xiaomi",
-    "preco_pix": 1899.0,
-    "preco_pix_fmt": "R$ 1.899,00",
-    "preco_parcelado": "12x de R$ 179,90",
-    "destaque": false
-  },
-  {
-    "id": 6,
-    "nome": "GiraGrill Premium Automática Original",
-    "categoria": "GiraGrill",
-    "preco_pix": 1299.0,
-    "preco_pix_fmt": "R$ 1.299,00",
-    "preco_parcelado": "12x de R$ 119,90",
-    "destaque": true
+    "preco_pix": 11111,
+    "preco_pix_fmt": "11111",
+    "preco_parcelado": "222",
+    "destaque": true,
+    "imagem": "img/1788789922498_SaveClip.App_763847260_18015141767867076_2582609230552487790_n.jpg"
   }
 ]
